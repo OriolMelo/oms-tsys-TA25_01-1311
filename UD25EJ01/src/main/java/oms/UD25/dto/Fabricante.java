@@ -20,12 +20,12 @@ public class Fabricante {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "codigo")
+	@Column(name = "cod")
 	private int codigo;
 	@Column(name = "nombre")
 	private String nombre;
 	@OneToMany
-	@JoinColumn(name="codigo")
+	@JoinColumn(name="cod")
 	private List<Articulo> articulo;
 	
 	public Fabricante() {

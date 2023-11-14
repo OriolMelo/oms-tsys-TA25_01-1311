@@ -1,8 +1,8 @@
 drop table if exists fabricantes;
 CREATE TABLE fabricantes (
-  codigo int NOT NULL AUTO_INCREMENT,
+  cod int NOT NULL AUTO_INCREMENT,
   nombre varchar(255) NOT NULL,
-  PRIMARY KEY (codigo)
+  PRIMARY KEY (cod)
 );
 
 drop table if exists articulos;
@@ -12,7 +12,7 @@ CREATE TABLE articulos (
   precio decimal(10,0) NOT NULL,
   fabricante int NOT NULL,
   PRIMARY KEY (codigo),
-  FOREIGN KEY (fabricante) REFERENCES fabricantes (codigo)
+  FOREIGN KEY (fabricante) REFERENCES fabricantes (cod)
 );
 
 
